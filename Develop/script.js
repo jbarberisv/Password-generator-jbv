@@ -1,7 +1,5 @@
-// Assignment code here
-
-
-function generatePassword() {
+// Ask for length
+function length () {
   var notInRange = true;
 
   while (notInRange === true) {
@@ -13,6 +11,40 @@ function generatePassword() {
       break
     }
   }
+
+  return passwordLength;
+}
+
+// Ask for lower case
+function lowerCase () {
+  var notInRange = true;
+
+  while (notInRange === true) {
+    var passwordLowercase =  window.prompt("Would you like for your password to have lowercase characters?.")
+    console.log(passwordLowercase);
+    if (passwordLowercase != "YES" && passwordLowercase != "NO") {
+      window.alert("Enter YES or NO.");
+      notInRange = true;
+    } else {
+      notInRange = false;
+    }
+  }
+
+  return passwordLowercase;
+}
+
+function generatePassword() {
+
+  var passLength = length();
+  var passLowercase = lowerCase();
+
+  console.log(passLowercase, passLength)
+  
+  // Generate a random number between 0 and 255
+  // var randomNum = Math.floor(Math.random() * 256);
+
+  // Convert the random number to its corresponding ASCII character
+  // var randomChar = String.fromCharCode(randomNum);
 
 
   var passwordLowercase =  window.prompt("Would you like for your password to have lowercase characters?.")
