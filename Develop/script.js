@@ -1,7 +1,12 @@
 // Assignment code here
 function generatePassword() {
-var passwordLength =  window.prompt("How many characters would you like your password to have? (Between 8-128 characters).")
-
+  var passwordLength =  window.prompt("How many characters would you like your password to have? (Between 8-128 characters).")
+  var passwordLength =  window.prompt("Ho many characters would you like your password to have? (Between 8-128 characters).")
+  var passwordLength =  window.prompt("How many characters would you like your password to have? (Between 8-128 characters).")
+  var passwordLength =  window.prompt("How many characters would you like your password to have? (Between 8-128 characters).")
+  var passwordLength =  window.prompt("How many characters would you like your password to have? (Between 8-128 characters).")
+  var passwordLength =  window.prompt("How many characters would you like your password to have? (Between 8-128 characters).")
+  
   return passwordLength; 
 }
 
