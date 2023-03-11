@@ -15,45 +15,57 @@ function length () {
   return passwordLength;
 }
 
-// Ask for lower case
-function lowerCase () {
-  var notInRange = true;
 
+function checkPrompt(question) {
+  var notInRange = true;
   while (notInRange === true) {
-    var passwordLowercase =  window.prompt("Would you like for your password to have lowercase characters?.")
-    console.log(passwordLowercase);
-    if (passwordLowercase != "YES" && passwordLowercase != "NO") {
+    var response =  window.prompt(question);
+    if (response != "YES" && response != "NO") {
       window.alert("Enter YES or NO.");
       notInRange = true;
     } else {
-      notInRange = false;
+      return response;
+      
     }
   }
-
-  return passwordLowercase;
 }
+
+function numberInterval(min, max) { 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
 
 function generatePassword() {
 
   var passLength = length();
-  var passLowercase = lowerCase();
+  var lowerCase = checkPrompt("Would you like for your password to have lowercase characters?");
+  var upperCase = checkPrompt("Would you like for your password to have uppercase characters?");
+  var numbers = checkPrompt("Would you like for your password to have numbers?");
+  var specialCharacters= checkPrompt("Would you like for your password to have special charcters?");
+  console.log('lowerCase1', lowerCase);
+  for (var num = 0; num < passLength; num++) {
+    console.log('lowerCase', lowerCase);
 
-  console.log(passLowercase, passLength)
+    if (lowerCase === 'YES') {
+      // encotrar un caracter entre el 97 y el 122
+      // random 
+
+      var randomNum = numberInterval(97, 122);
+      var randomChar = String.fromCharCode(randomNum);
+      console.log (randomChar)
+
+    }
+    
+  }
+
   
   // Generate a random number between 0 and 255
-  // var randomNum = Math.floor(Math.random() * 256);
 
   // Convert the random number to its corresponding ASCII character
   // var randomChar = String.fromCharCode(randomNum);
 
 
-  var passwordLowercase =  window.prompt("Would you like for your password to have lowercase characters?.")
-  var passwordUppercase =  window.prompt("Would you like for your password to have uppercase characters?.")
-  var passwordNumber =  window.prompt("Would you like for your password to have numbers?")
-  var passwordSpecial =  window.prompt("Would you like for your password to have special charcters?.")
-
   
-  return passwordLength; 
 }
 
 // Get references to the #generate element
