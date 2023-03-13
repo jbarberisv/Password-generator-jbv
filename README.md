@@ -19,7 +19,7 @@ I coded a personalized password generator from scratch using Java script. i was 
 - Interactive page
 
 ## Deployment
-[Click Here] (https://jbarberisv.github.io/password-generator-jbv/to) view the final result.
+[Click Here] (https://jbarberisv.github.io/password-generator-jbv/) view the final result.
 
 
 ## Credits
